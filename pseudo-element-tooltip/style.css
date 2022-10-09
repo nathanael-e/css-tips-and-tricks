@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css?family=Unica+One|Vollkorn");
+
+:root {
+  --main-font: "Vollkorn";
+  --header-font: "Unica One";
+  --gray-clr: rgba(0, 0, 0, 0.7);
+  --red-clr: #c31;
+}
+
+body {
+  text-align: center;
+  font-family: var(--main-font);
+  color: var(--gray-clr);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--header-font);
+  text-transform: uppercase;
+  color: var(--red-clr);
+}
+
+a {
+  color: var(--red-clr);
+}
+
+a[tool-tip-text] {
+  position: relative;
+}
+
+a[tool-tip-text] {
+  position: relative;
+}
+
+a[tool-tip-text]::after {
+  content: attr(tool-tip-text);
+  position: absolute;
+  background-color: var(--gray-clr);
+  color: white;
+  border-radius: 5px;
+  padding: 1em 1em;
+  white-space: nowrap;
+  display: block;
+  left: 0;
+  bottom: 100%;
+  transform: scale(0);
+  transition: transform ease-out 150ms;
+}
+
+a[tool-tip-text]:hover::after {
+  transform: scale(1);
+}
