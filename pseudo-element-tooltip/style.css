@@ -13,11 +13,11 @@ body {
   color: var(--gray-clr);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
+.heading {
+  margin-bottom: 2em;
+}
+
+h1 {
   font-family: var(--header-font);
   text-transform: uppercase;
   color: var(--red-clr);
