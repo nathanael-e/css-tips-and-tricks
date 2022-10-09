@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Unica+One|Vollkorn");
+@import url("https://fonts.googleapis.com/css?family=Oswald|Inter+Tight");
 
 :root {
-  --main-font: "Vollkorn";
-  --header-font: "Unica One";
+  --main-font: "Inter Tight";
+  --header-font: "Oswald";
   --gray-clr: rgba(0, 0, 0, 0.7);
   --red-clr: #c31;
 }
