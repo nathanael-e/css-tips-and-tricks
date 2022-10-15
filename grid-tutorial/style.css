@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald|Mada");
+
+:root {
+  --main-font: "Mada";
+  --header-font: "Oswald";
+
+  --white-clr: white;
+  --purple-clr: rgb(117, 65, 201);
+  --dark-grey-blue-clr: rgb(72, 85, 108);
+  --dark-clr: rgb(24, 31, 43);
+  --black-clr: black;
+  --pale-grey-clr: rgb(237, 242, 248);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--pale-grey-clr);
+  text-align: center;
+  font-family: var(--main-font);
+}
+
+.title {
+  font-family: var(--header-font);
+  text-transform: uppercase;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.title::before,
+::after {
+  content: "";
+  background-color: var(--black-clr);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  gap: 1.5rem;
+}
+
+.grid-col-span-2 {
+  grid-column: span 2;
+}
+
+.box {
+  height: 100%;
+  text-align: left;
+  background-color: var(--dark-grey-blue-clr);
+  border-radius: 5px;
+  padding: 1rem;
+  box-shadow: 0 0 10px -5px;
+}
+
+.box:nth-child(1) {
+  background-color: var(--purple-clr);
+}
+
+.box:nth-child(2) {
+  color: var(--white-clr);
+  background-color: var(--dark-clr);
+}
+
+.box:nth-child(3) {
+  color: var(--black-clr);
+  background-color: var(--white-clr);
+}
+
+.box:nth-child(4) {
+  color: var(--white-clr);
+  background-color: var(--black-clr);
+}
+
+.box:first-child {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.box:last-child {
+  grid-column-start: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
