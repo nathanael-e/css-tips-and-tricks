@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald|Mada");
+
+:root {
+  --main-font: "Mada";
+  --header-font: "Oswald";
+
+  --pale-grey-clr: rgb(237, 242, 248);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--pale-grey-clr);
+  text-align: center;
+  font-family: var(--main-font);
+}
+
+.title {
+  font-family: var(--header-font);
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+
+.form-group {
+  display: grid;
+  grid-template-columns: 14rem 14rem;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  font: inherit;
+  box-shadow: 0 0 10px -5px;
+}
+
+.input-label {
+  left: 0;
+  transform: translate(13px, 13px);
+  transform-origin: left;
+  position: absolute;
+  transition: transform 0.2s;
+}
+
+.input-field:focus + .input-label {
+  transform: translate(0px, -20px) scale(0.8);
+}
+
+.input-field:valid + .input-label {
+  transform: translate(0px, -20px) scale(0.8);
+}
