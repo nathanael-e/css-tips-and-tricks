@@ -1,0 +1,11 @@
+services:
+  css-snippet:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        PROJECT: ${PROJECT}
+    ports:
+      - "5173:5173"
+    environment:
+      - NODE_ENV=production
