@@ -9,9 +9,6 @@ services:
       - "5173:5173"
     environment:
       - NODE_ENV=production
-<<<<<<< Updated upstream
-=======
     volumes:
       - ./${PROJECT}:/app/${PROJECT}
       
->>>>>>> Stashed changes

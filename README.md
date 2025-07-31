@@ -16,8 +16,6 @@ docker run --rm -it \
   sh -c "npm create vite@latest ."
  ```
 
-<<<<<<< Updated upstream
-=======
 ``` 
 docker run --rm -it \
   -u $(id -u):$(id -g) \
@@ -29,4 +27,3 @@ docker run --rm -it \
   sh -c "npm install && npm run dev -- --host"
  ```
 
->>>>>>> Stashed changes
